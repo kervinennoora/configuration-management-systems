@@ -1,5 +1,44 @@
 # h4 - Demoni
 
+**x) Lue ja tiivistä**
+
+**Karvinen 2023:**
+- Artikkelissa neuvotaan luomaan kansio, joka kuvaa ajettavan tilan teemaa. Kansioon luodaan init.sls tiedosto. 
+- Luomalla tekstitiedostoja, jotka sisältävät haluamasi sisällön voit ajaa tiloja orjilla helposti.
+- Tiedostot kirjoitetaan YAMLilla, joten kirjoitusasu ja oikea määrä välilyöntejä on erittäin tärkeää.
+- Helppo ajaa orjille state.apply -komennolla.
+- Top.sls tiedostot määrää mitkä tilat ajetaan millekkin orjalle.
+- Voi ajaa osalle tai kaikille.
+
+**Salt contributors:**
+- YAML on merkintäkieli, jolla on monia tehokkaita ominaisuuksia.
+- YAML-renderöijän tehtävänä on ottaa YAML-tietorakenne ja kääntää se Pythonin tietorakenteeksi Saltia varten.
+- YAML-säännöt:
+    - Data on rakennettu avain: arvo -pareihin.
+    - Kartoituksissa käytetään kaksoispistettä ja yhtä välilyöntiä (" : ") merkitsemään avain: arvo -pareja.
+    - Avainten arvo voi olla monenlaisissa rakenteissa.
+    - Kaikki avaimet/ominaisuudet ovat kirjainkoosta riippuvaisia.
+    - Tabulaattorit EIVÄT ole sallittuja, käytä VAIN välilyöntejä.
+    - Kommentit alkavat risuaidalla “#”.
+- YAML koostuu kolmesta eri peruselementtityypistä:
+    - Skalaarit(Scalars) - avain: arvo -kartoitukset, joissa arvo voi olla numero, merkkijono tai totuusarvo.
+    - Listat(Lists) - avain, jonka jälkeen tulee lista arvoista, joissa jokainen arvo on omalla rivillään ja alkaa kahdella välilyönnillä ja viivalla.
+    - Sanakirjat(Dictionaries) - kokoelma avain: arvo -kartoituksia ja listoja.
+ - YAML on järjestetty lohkorakenteisiin.
+ - Sisennys asettaa kontekstin!
+ - Sinun TÄYTYY sisentää ominaisuudet ja lista yhdellä tai useammalla välilyönnillä, mutta kaksi välilyöntiä on standardi.
+ - Kun kyse on lista tai sanakirja lohkorakenteesta, osoitetaan jokainen merkintä viivalla ja välilyönnillä "- ".
+
+**Karvinen 2018:**
+- Voit hallita suurta määrää demoneja palvelinten hallinnan avulla.
+- Pkg-File-Service on yleinen malli tähän: asenna ohjelmisto, korvaa konfiguraatiotiedosto ja lopuksi uudelleenkäynnistä demoni.
+- Artikkelissa neuvotaan ensimmäiseksi luomaan SSH tila. Siihen tarkat ohjeet ovat artikkelissa.
+- Kun konfiguraatiotiedosto on valmis ajetaan state.aaply -komento orjille.
+- Lopuksi täytyy muistaa testata onnistuiko konfiguraatio.
+    - Esimerkki komento artikkelista: *nc -vz tero.example.com 8888*.
+    - Jos SSH demoni vastaa portilta 8888, konfiguraatio on onnistunut!
+
+
 ## a) Hello SLS!
 
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/17352a8c-a571-494c-bce4-cc8cb87c3b7b)
