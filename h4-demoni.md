@@ -30,3 +30,22 @@
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/5cb4dacc-6d7a-4ac8-97ba-a16135c06f26)
 
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/365ed175-34dd-47a3-bc03-7de2fda120af)
+
+
+## References
+
+ Salt Project. s.a. salt.states.file. https://docs.saltproject.io/en/latest/ref/states/all/salt.states.file.html#salt.states.file.keyvalue
+ 
+ Karvinen, T. 2024. Infra as Code - Palvelinten hallinta 2024. https://terokarvinen.com/2024/configuration-management-2024-spring/
+
+ Karvinen, T. 2024. H4 - Demoni. https://terokarvinen.com/2024/configuration-management-2024-spring/#h4-demoni
+
+ Karvinen, T. 2023. Salt Vagrant - automatically provision one master two slaves. https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file
+
+ Salt Project. 2021. Salt overview - Salt user guide. https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml
+
+ Karvinen, T. 2018. Pkg-File-Servoce - Control Daemons with Salt. https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh
+
+ Vivek Gite. 2024. How To Restart SSH Service under Linux. https://www.cyberciti.biz/faq/howto-restart-ssh/
+
+ 
