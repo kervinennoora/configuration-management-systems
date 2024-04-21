@@ -41,32 +41,60 @@
 
 ## a) Hello SLS!
 
+Aloitin luomalla uuden hakemiston /srv/, jonne loin hakemiston /salt/. Lopuksi tein vielä hakemiston hello, jonne asetin tiedoston init.sls.
+Init.sls piti sisällään seuravaavat tiedot:
+
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/022c8475-6156-4b0b-b31f-09b3604693d8)
+
+Lopuksi ajoin komennon ````sudo salt-call --local state.apply````.
+
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/17352a8c-a571-494c-bce4-cc8cb87c3b7b)
+
+Ajoin komennon ````sudo salt-call --local state.apply```` vielä toisenkin kerran, saavuttaakseni idempotentin tilan.
 
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/cfb722f1-6797-4ab4-8bc8-440cfe5d676a)
 
 ## b) Top
 
+Loin top.sls tiedoston /srvt/salt hakemistoon. Top.sls tiedoston avulla voin määrittää mitä orjia tila koskee.
+
+Lopuksi ajoin komennon ````sudo salt '*' state.apply````.
+
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/aa6f6826-cbe2-4bc0-aa76-f01ebb2345d2)
 
+Sitten siirryin hello hakemistoon ja muokkasin init.sls tiedostoa. Tein tämän siksi, että voin testata muutosta.
+
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/3d05e69b-c117-4878-a49b-d8307847b07e)
+
+Lopuksi ajoin komennon ````sudo salt '*' state.apply````. Muutosta tapahtui. Kuva havainnolistaa näkymää myös orjakoneelta.
 
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/4799c183-00e7-4a76-a7f5-67b31b62d54b)
 
 ## c) Apache easy mode
 
+Aloitin luomalla hakemiston /salt/apache/, jonne sijoitin uuden init.sls tiedoston. Init.sls tiedosto sisälti seuraavanlaiset tiedot. 
+
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/3d80e379-5ffd-4c14-8c8d-feaddf6a1c49)
 
+Siirryin hakemistoon /ect/apache2/sites-available/. Hakemistoon loin tiedoston noora.conf, joka sisälsi seuraavat tiedot. Lopuksi lisäsin noora.conf tiedoston myös hakemistoon /etc/apache2/sites-enabled/.
+
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/e28f3419-d680-47cd-a54f-dffdd91e3198)
+
+Lopuksi ajoin komennon ````sudo salt-call --local --state.output=terse state.apply apache````. Ajoin saman komennon toisenkin kerran saavuttaakseni idempotentin tilan. 
 
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/1e292b5d-ac50-429e-be6e-fbc9be6b6497)
 
 ## d) SHHouto
 
-![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/c833b61a-7d16-41b3-a9e0-1fd1b7eb0c3f)
+Menin kansioon /etc/, ja avasin tiedoston *sshd_config*. Lisäsin konfiguraatio tiedostoon portin 1234.
 
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/76d03cb2-e67e-401c-9780-6005160296b4)
 
+Tallensin konfiguraatio tiedoston, jonka jälkeen ajoin komennon ````sudo systemctl restart ssh````. Tämän jälkeen ajoin komennot ````nc -vz localhost 1234```` ja ````nc -vz localhost 22````.
+
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/5cb4dacc-6d7a-4ac8-97ba-a16135c06f26)
+
+Lopuksi ajoin komennon ````sudo salt-call --local --state.output=terse state.apply apache````.
 
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/365ed175-34dd-47a3-bc03-7de2fda120af)
 
