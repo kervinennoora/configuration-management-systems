@@ -56,6 +56,16 @@ Sitten siirryin ````C:/Windows/Temp```` kansioon ja tarkistin toiminnon varmasti
 ![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/dff69c2b-be9b-4ad6-993f-d9a1cff01b05)
 
 ## e) Komennus
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/22549e45-a179-40fd-a09b-1a9f85a25f90)
+
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/f65d9cc2-aa79-4283-9239-f4199fa4147c)
+
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/c7581a16-44b6-4b62-8d4b-93bd4947b074)
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/4d6403ea-41fb-4c9f-b730-744de801526b)
+
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/29146869-dd98-4003-ae78-b9c5404cf2b0)
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/cda55c61-7c3d-46bd-8733-6f81d4dfb760)
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/f90a2093-16b6-4ee3-aea9-f095874cbfb7)
 
 ## References
 
