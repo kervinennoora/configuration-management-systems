@@ -6,6 +6,8 @@
 - Salt tarjoaa Windows-pakettienhallintatyökalun, jonka avulla voi asentaa, päivittää, poistaa ja hallita ohjelmistopaketteja etä-Windows-järjestelmissä.
 - Työkalu tarjoaa ohjelmistovaraston ja paketinhallintatyökalun.
     - Vastaavat Linuxissa käytettäviä ```yum``` ja ```apt```.
+- Käytä ```pkg.install``` kun haluat asentaa paketin käyttäen käyttöjärjestelmän mukaan määritettyä paketinhallintaa.
+- Käytä ```pkg.installed``` -komentoa tarkistaaksesi, onko tietty paketti asennettu minionille.
 - Paketinmäärittelytiedostot:
     - ladattavan ohjelmistopaketin koko nimi
     - ohjelmistopaketin versio
