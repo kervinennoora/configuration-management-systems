@@ -47,6 +47,16 @@
   - ```pkg.install``` asentaa paketin.
   - ```pkg.remove``` poistaa paketin.
 
+## a) Paketti Windowsia
+
+## b) Benchmark
+
+## c) Testbench
+
+
+## d) Viisi ideaa
+
+
 ## References
 Karvinen, T. 2024. Infra as Code - Palvelinten hallinta 2024. https://terokarvinen.com/2024/configuration-management-2024-spring/
 
