@@ -69,7 +69,7 @@ Lopuksi ajoin vielä komennon ```salt-call --local state.single pkg.installed "f
 
 **Krakau, Essi:**
  
-Ensimmäinen arvioitava työ on Krakaun vuonna 2023 tekemä kurssitehtävä h7 - miniprojekti. Tehtävä antaa hyvän perus kuvan kurssin tärkeimmistä asioista. Siinä ilmenee idempotentti, infra koodina ja yksi totuus, kurssin pyhäkolminaisuus. Tehtävä alkaa ihan kurssin alussa opituista ruohonjuuritason asioista ja etenee loppukurssilla opittuihin skirpteihin ja niiden ajamiseen. Tehtävä on mielestäni siitä hyvä, ettei se oikein ole riippuvainen mistään, joten ohjeita seuraamalla voit suorittaa itse tehtävän täysin samalla tavalla. Tehtävä on oiva tapa näyttää mitä kaikkea Saltilla voi saada aikaan.
+Ensimmäinen arvioitava työ on Krakaun vuonna 2023 tekemä kurssitehtävä h7 - miniprojekti. Tehtävä antaa hyvän perus kuvan kurssin tärkeimmistä asioista. Siinä ilmenee idempotentti, infra koodina ja yksi totuus, kurssin pyhäkolminaisuus. Tehtävä alkaa ihan kurssin alussa opituista ruohonjuuritason asioista ja etenee loppukurssilla opittuihin skirpteihin ja niiden ajamiseen. Tehtävä on mielestäni siitä hyvä, ettei se oikein ole riippuvainen mistään, joten ohjeita seuraamalla voit suorittaa itse tehtävän täysin samalla tavalla. Tehtävä on oiva tapa näyttää mitä kaikkea Saltilla voi saada aikaan.  
 
  **Seppä, Toni:**
 
@@ -81,10 +81,62 @@ Valkamon vuonna 2022 tekemässä projektissa luotiin oma Salt moduuli. Projektin
 
 ## c) Testbench
 
+Tässä tehtävän osassa päätin toistaa Krakaun tekemän projektityön. Koen, että tämä työ on lähimpänä omaa osaamistasoani, joten tietämykseni siitä mitä tehtävässä tapahtuu ja jos siinä tapahtuu virheitä on parempi. Täten omat päätelmäni ja perusteluni ovat kattavampia kuin silloin kun arvioisin tehtävää, jota en itse täysin ymmärtäisi. 
 
+Tehtävän alkuosuus on minulla jo valmiiksi virtuaalikoneellani, joten aloitan tehtävän testaamisen noin tehtävän keskivaiheesta. Aloitin luomalla uuden hakemiston ```/srv/salt/``` hakemistoon. Annoin uuden hakemiston nimeksi *krakau*.
+
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/ca445fa6-f72e-4985-b726-a667f3e4a640)
+
+Uuteen hakemistoon loin init.sls-tiedoston, joka sisälsi kaikki paketit jota tehtävää varten täytyi asentaa orjille. 
+
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/a03e6310-d97c-4691-be42-5f751357f8ed)
+
+Tämän jälkeen palasin hakemistoon ```/srv/salt/``` ja loin sinne uuden hakemiston *krakaukomento*. Uuten hakemistoon loin tiedoston *komento*, joka sisälsi lyhyen shell-skriptin, joka ajettiin orjille.
+
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/b36f9734-bf2a-45a8-a84d-e5ac207a6ed9)
+
+Tähän samaan ```/srv/salt/krakaukomento``` hakemistoon loin vielä init.sls-tiedoston, joka sisälsi seuraavat tiedot.
+
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/615fbf91-1a6f-42a3-9e3f-007763a85983)
+
+Seuraavaksi loin vielä top.sls tiedoston komennolla ```micro top.sls```. Tiedostoon tuli seuraavat tiedot.
+
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/f7a69046-441f-4877-b8e0-6b8c2845fc87)
+
+Lopuksi oli aika ajaa Krakaun projekin ohjeilla tehdyt tiedostot ja skriptit. Lopputulos oli tämä.
+
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/66c49405-bd2c-4bc7-bdeb-41d8d30e783d)
+
+Tiedän, että tehtävä on helppo korjata. Tehtävä on simppeli ja olen aiemmin toistanut melkein samaa. Tämä oli tulos suoraan Krakaun projektia seuraamalla. 
+
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/fe886c74-99b9-4553-9878-58059c7ad33b)
+
+![image](https://github.com/kervinennoora/configuration-management-systems/assets/165003747/3eabc4e3-6901-415f-86fb-9b7abe65fd8f)
+
+
+Tässä tulos, kun tein pieniä korjauksia. Virheet saattavat myös johtua itsestäni, mutta tässä ohjelma vielä toimivana versiona. Virheeni olivat todella pieniä ja ja ihan minimaalisilla muutoksilla saatiin projekti päätökseen. Moduuli on mielestäni hyvä ja helposti seurattavissa. Siinä hyödynnetään hyvin kurssilla opittuja asioita ja se antaa hyvän perus käsityksen palvelinten hallinnasta.
 
 ## d) Viisi ideaa
 
+**Idea 1:**
+
+Ensimmäinen ideani on luoda uusi virtuaalikoneympäristö herra-orja-arkkitehtuurilla. Tehdä sinne eri konfiguraatiota ja luoda skripti joka ensin asentaa cowsayn ja tämän jälkeen ajaa sillä asennetulla sovelluksella tervehdyksen orjilla. Tämä ihan vain siksi, että cowsay on lempi sovellukseni.
+
+**Idea 2:**
+
+Toinen ideani luoda uusi virtuaalikoneympäristö herra-orja-arkkitehtuurilla. Tehdä sinne eri konfiguraatiota ja luoda skripti joka ensin tarkistaa ja  tarvittaessa asentaa orjakoneille päivitykset.
+
+**Idea 3:**
+
+Kolmas ideani luoda uusi virtuaalikoneympäristö herra-orja-arkkitehtuurilla. Tehdä sinne eri konfiguraatiota, asentaa apache ja luoda skripti joka asentaa lamp-stackin.
+
+**Idea 4:**
+
+Neljäs ideani on luoda uusi virtuaalikoneympäristö herra-orja-arkkitehtuurilla. Tehdä sinne eri konfiguraatiota ja luoda skripti joka asentaa orjakoneille komentorivipelejä.
+
+**Idea 5:**
+
+Viides ideani on luoda uusi virtuaalikoneympäristö herra-orja-arkkitehtuurilla. Tehdä sinne eri konfiguraatiota ja luoda skripti joka luo uusia orjakoneita haluamillani konfiguraatioilla.
 
 ## References
 Karvinen, T. 2024. Infra as Code - Palvelinten hallinta 2024. https://terokarvinen.com/2024/configuration-management-2024-spring/
